@@ -11,7 +11,7 @@ function validateProject(req, res, next) {
 
 function validateAction(req, res, next) {
   // const { project_id, description, notes } = req.body;
-  if (req.body) {
+  if (!req.body) {
     res.status(400).json({
       error: "Missing required field"
     });
